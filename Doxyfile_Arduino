@@ -1,0 +1,55 @@
+# Doxyfile tuned for Arduino/ESP32 sketches
+# Doxygen version: 1.14 compatible
+
+# ---------------- Project ----------------
+PROJECT_NAME           = "FinalProject (ESP32-S3 Smart Planter)"
+PROJECT_BRIEF          = "Smart planter: moisture sensing, pump control, LCD UI, ultrasonic safety, FreeRTOS tasks"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+OPTIMIZE_OUTPUT_FOR_C  = NO
+
+# ---------------- Build / Parsing ----------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+JAVADOC_AUTOBRIEF      = YES
+MULTILINE_CPP_IS_BRIEF = YES
+CASE_SENSE_NAMES       = YES
+
+# ---------------- Inputs ----------------
+INPUT                  = .
+RECURSIVE              = YES
+FILE_PATTERNS          = *.ino *.h *.hpp *.c *.cpp
+EXTENSION_MAPPING      = ino=C++
+
+# If you have generated headers or library folders to skip, list them here:
+# EXCLUDE_PATTERNS     = */.git/* */build/* */.pio/*
+
+# ---------------- Source Browser ----------------
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+STRIP_CODE_COMMENTS    = NO
+
+# ---------------- Warnings (tune as you like) ----------------
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_NO_PARAMDOC       = YES
+
+# ---------------- Output Formats ----------------
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+
+# ---------------- Diagrams (enable if Graphviz is installed) ----------------
+HAVE_DOT               = NO
+# If you install Graphviz, switch to YES and optionally enable:
+# CALL_GRAPH           = YES
+# CALLER_GRAPH         = YES
+
+# ---------------- Misc ----------------
+QUIET                  = NO
+GENERATE_TREEVIEW      = YES
